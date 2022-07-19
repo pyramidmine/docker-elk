@@ -6,9 +6,14 @@ server.name: kibana
 server.host: 0.0.0.0
 elasticsearch.hosts: [ "http://elasticsearch:9200" ]
 monitoring.ui.container.elasticsearch.enabled: true
-xpack.monitoring.collection.enabled: true
 
 ## X-Pack security credentials
 #
 elasticsearch.username: kibana_system
 elasticsearch.password: ${KIBANA_SYSTEM_PASSWORD}
+
+xpack.encryptedSavedObjects.encryptionKey: "e776db8cabb708c3bc6469651cd82664"
+xpack.reporting.encryptionKey: "f182037f6575d4a723390002154d41e9"
+xpack.reporting.kibanaServer.hostname: localhost
+xpack.reporting.roles.enabled: false
+xpack.security.encryptionKey: "6caab18925a973a2760d891763296a92"
